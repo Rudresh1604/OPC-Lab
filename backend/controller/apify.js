@@ -49,7 +49,9 @@ const actorController = async (req, res) => {
 };
 const runController = async (req, res) => {
   const { apiKey, actorId, input } = req.body;
-  // console.log(input);
+  console.log(input);
+  console.log(actorId);
+  console.log(apiKey);
 
   try {
     const response = await axios.post(
@@ -70,8 +72,8 @@ const runController = async (req, res) => {
   } catch (error) {
     console.error("Error fetching actors:", error);
     res.status(500).json({
-      error: "Failed to fetch actors",
-      details: error.response?.data || error.message,
+      success: false,
+      error: error.response?.data || error.message,
     });
   }
 };
@@ -109,6 +111,7 @@ const getLastRunController = async (req, res) => {
         },
       }
     );
+
     return res.status(200).json({ success: true, data: response.data });
   } catch (error) {
     console.log(error);
