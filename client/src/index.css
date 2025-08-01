@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Global styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  font-family: system-ui, sans-serif;
+}
+
+/* If you want to use Tailwind utility classes, use them directly in your HTML/JSX.
+   If you want to keep a custom container class, define it with standard CSS: */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
