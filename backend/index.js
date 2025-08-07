@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.use("/api", apify);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 
 module.exports.handler = serverless(app);
