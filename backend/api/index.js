@@ -3,7 +3,7 @@ const cors = require("cors");
 const serverless = require("serverless-http");
 const app = express();
 const PORT = process.env.PORT || 3000;
-const apify = require("./routes/apify");
+const apify = require("../routes/apify");
 
 app.use(cors("*"));
 app.use(express.json());
